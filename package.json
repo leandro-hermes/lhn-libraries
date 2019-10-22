@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "mat-alert:build": "yarn build mat-alert",
+    "mat-alert:pack": "cd dist/mat-alert && npm pack",
+    "mat-alert:package": "yarn mat-alert:build && yarn mat-alert:pack"
   },
   "private": true,
   "dependencies": {
