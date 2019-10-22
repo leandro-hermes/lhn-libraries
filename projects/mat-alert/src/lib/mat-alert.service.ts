@@ -13,7 +13,7 @@ export class MatAlert {
   /**
    * Opens an alert dialog
    */
-  public show(title: string, message: string = '', config: any = MatAlertConfig): Observable<void> {
+  public show(title: string, message: string = '', config: Partial<MatAlertConfig> = {}): Observable<void> {
     config.title = title;
     config.message = message;
     return this.dlg.open(MatAlertComponent, {
