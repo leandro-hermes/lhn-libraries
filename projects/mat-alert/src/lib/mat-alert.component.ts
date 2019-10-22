@@ -12,11 +12,13 @@ import { MAT_ALERT_DEFAULT_CONFIG } from './mat-alert-default-config.constant';
 })
 export class MatAlertComponent {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public config: MatAlertConfig,
+  public config: MatAlertConfig;
+
+  constructor(@Inject(MAT_DIALOG_DATA) data: MatAlertConfig,
               sanitizer: DomSanitizer,
               @Inject(MAT_ALERT_DEFAULT_CONFIG) defaultConfigs: MatAlertConfig) {
-    Object.assign(this.config, defaultConfigs, this.config);
-    this.config.message = sanitizer.bypassSecurityTrustHtml(this.config.message.toString());
+    data.message = sanitizer.bypassSecurityTrustHtml(data.message.toString());
+    this.config = Object.assign({}, defaultConfigs, data);
   }
 
 }
