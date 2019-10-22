@@ -1,12 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MatAlertService } from './mat-alert.service';
+import { MatAlert } from './mat-alert.service';
 
 describe('MatAlertService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  beforeEach(() => TestBed.configureTestingModule({
+    providers: [
+      MatAlert,
+    ],
+  }));
 
   it('should be created', () => {
-    const service: MatAlertService = TestBed.get(MatAlertService);
+    const service: MatAlert = TestBed.get(MatAlert);
     expect(service).toBeTruthy();
   });
 });

@@ -3,5 +3,4 @@
  */
 
 export * from './lib/mat-alert.service';
-export * from './lib/mat-alert.component';
 export * from './lib/mat-alert.module';
