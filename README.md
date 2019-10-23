@@ -1,8 +1,9 @@
 # LhnLibraries
 
-[Live demo](https://leandro-hermes.github.io/mat-alert/mat-alert)
+[![NPM](https://nodei.co/npm/@leandrohermes/mat-alert.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@leandrohermes/mat-alert/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/edce6ef174074698af4378e1081c62eb)](https://www.codacy.com/manual/lhn/mat-alert?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=leandro-hermes/mat-alert&amp;utm_campaign=Badge_Grade)
 
 ## Development server
 
