@@ -1,24 +1,52 @@
-# MatAlert
+# @lhn/mat-alert
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.11.
+[![NPM](https://nodei.co/npm/@lhn/mat-alert.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@lhn/mat-alert/)
 
-## Code scaffolding
+![npm](https://img.shields.io/npm/v/@leandrohermes/mat-alert?color=blue)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/edce6ef174074698af4378e1081c62eb)](https://www.codacy.com/manual/lhn/mat-alert?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=leandro-hermes/mat-alert&amp;utm_campaign=Badge_Grade)
 
-Run `ng generate component component-name --project mat-alert` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project mat-alert`.
-> Note: Don't forget to add `--project mat-alert` or else it will be added to the default project in your `angular.json` file. 
+## Dependencies
 
-## Build
+`@angular/core@>=5.0.0`
+ 
+`@angular/common@>=5.0.0`
+ 
+`@angular/material@>=5.0.0` 
 
-Run `ng build mat-alert` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Usage
 
-## Publishing
+Add `MatAlertModule` to the `imports` section of the NgModule you want to use:
 
-After building your library with `ng build mat-alert`, go to the dist folder `cd dist/mat-alert` and run `npm publish`.
+```angular2
+import { MatAlertModule } from '@lhn/mat-alert';
+ 
+@NgModule({
+ // ...
+ imports: [
+   // ...
+   MatAlertModule,
+ ]
+})
+```
 
-## Running unit tests
+Inject the service into the component:
 
-Run `ng test mat-alert` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```angular2
+import { MatAlert } from '@lhn/mat-alert';
+ 
+@Component({
+  // ...
+})
+export class AppComponent {
+  constructor(private alert: MatAlert) {}
+  // ..
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  public showAlert() {
+    this.alert.show('Message title', 'Message content (<em>supports HMTL</em>)', {
+      buttonText: 'Great!',
+      buttonTheme: 'accent',
+      raisedButton: true,
+    });
+  }
+}
+```
