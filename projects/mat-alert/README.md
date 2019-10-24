@@ -2,7 +2,9 @@
 
 [![NPM](https://nodei.co/npm/@lhn/mat-alert.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@lhn/mat-alert/)
 
-![npm](https://img.shields.io/npm/v/@lhn/mat-alert?color=blue)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/leandro-hermes/mat-alert?label=github&color=24292e)
+![npm](https://img.shields.io/npm/v/@lhn/mat-alert?color=CB3837)
+![NPM](https://img.shields.io/npm/l/@lhn/mat-alert)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/edce6ef174074698af4378e1081c62eb)](https://www.codacy.com/manual/lhn/mat-alert?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=leandro-hermes/mat-alert&amp;utm_campaign=Badge_Grade)
 
 ## Dependencies
