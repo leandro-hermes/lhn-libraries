@@ -1,6 +1,5 @@
 # @lhn/mat-alert
 
-
 [![NPM](https://nodei.co/npm/@lhn/mat-alert.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@lhn/mat-alert/)
 
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/leandro-hermes/lhn-libraries?label=github&color=24292e)
@@ -10,13 +9,13 @@
 
 ## Dependencies
 
-* `@angular/core@>=6.0.0`
+- `@angular/core@>=6.0.0`
  
-* `@angular/common@>=6.0.0`
+- `@angular/common@>=6.0.0`
  
-* `@angular/material@>=6.0.0` 
+- `@angular/material@>=6.0.0` 
 
-# Usage
+## Usage
 
 Add `MatAlertModule` to the `imports` section of the NgModule you want to use:
 
