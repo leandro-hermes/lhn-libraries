@@ -1,5 +1,7 @@
 <h1 mat-dialog-title>{{config.title}}</h1>
-<mat-dialog-content *ngIf="config.message" [innerHTML]="config.message"></mat-dialog-content>
+<mat-dialog-content class="mat-typography" *ngIf="config.message">
+  <h4 [innerHTML]="config.message"></h4>
+</mat-dialog-content>
 <mat-dialog-actions align="end">
   <button [class.mat-raised-button]="config.raisedButton"
           [color]="config.buttonTheme"
