@@ -9,11 +9,11 @@
 
 ## Dependencies
 
-`@angular/core@>=6.0.0`
+* `@angular/core@>=6.0.0`
  
-`@angular/common@>=6.0.0`
+* `@angular/common@>=6.0.0`
  
-`@angular/material@>=6.0.0` 
+* `@angular/material@>=6.0.0` 
 
 # Usage
 
