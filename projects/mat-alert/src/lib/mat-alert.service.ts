@@ -17,6 +17,7 @@ export class MatAlert {
    * @param message Message body. Can be an additional description
    * @param config Configuration for the alert
    * @param disableClose Flag for disable closing the alert clicking outside or pressing Escape
+   * @return Observable<void> The MatDialog's `afterClosed()` observable
    */
   public show(title: string, message: string = '', config: Partial<MatAlertConfig> = {}, disableClose = false): Observable<void> {
     config.title = title;
