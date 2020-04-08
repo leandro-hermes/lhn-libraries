@@ -7,4 +7,5 @@ export const matAlertDefaultConfig: Partial<MatAlertConfig> = {
   buttonText: 'Ok',
   buttonTheme: null,
   raisedButton: false,
+  autoFocus: true,
 };

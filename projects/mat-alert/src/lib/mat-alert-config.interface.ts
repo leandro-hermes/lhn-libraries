@@ -7,4 +7,5 @@ export class MatAlertConfig {
   buttonText?: string;
   buttonTheme?: ThemePalette;
   raisedButton?: boolean;
+  autoFocus?: boolean;
 }

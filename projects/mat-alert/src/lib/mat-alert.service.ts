@@ -22,10 +22,12 @@ export class MatAlert {
   public show(title: string, message: string = '', config: Partial<MatAlertConfig> = {}, disableClose = false): Observable<void> {
     config.title = title;
     config.message = message;
+    const {autoFocus} = config;
     return this.dlg.open(MatAlertComponent, {
       minWidth: 300,
       data: config,
       role: 'alertdialog',
+      autoFocus,
       disableClose,
     }).afterClosed();
   }
