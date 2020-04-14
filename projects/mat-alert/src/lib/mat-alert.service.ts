@@ -1,14 +1,16 @@
-import { Injectable } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { Inject, Injectable } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material';
 import { Observable } from 'rxjs';
 
 import { MatAlertComponent } from './mat-alert.component';
 import { MatAlertConfig } from './mat-alert-config.interface';
+import { MAT_ALERT_DEFAULT_CONFIG } from './mat-alert-default-config.constant';
 
 @Injectable()
 export class MatAlert {
 
-  constructor(private dlg: MatDialog) { }
+  constructor(private dlg: MatDialog,
+              @Inject(MAT_ALERT_DEFAULT_CONFIG) private defaultConfigs: MatAlertConfig) { }
 
   /**
    * Opens an alert dialog
@@ -22,13 +24,13 @@ export class MatAlert {
   public show(title: string, message: string = '', config: Partial<MatAlertConfig> = {}, disableClose = false): Observable<void> {
     config.title = title;
     config.message = message;
-    const {autoFocus} = config;
-    return this.dlg.open(MatAlertComponent, {
+    const cfg: MatDialogConfig = Object.assign({
       minWidth: 300,
       data: config,
       role: 'alertdialog',
-      autoFocus,
       disableClose,
-    }).afterClosed();
+      hasBackdrop: !!this.dlg.openDialogs.length,
+    }, this.defaultConfigs, config);
+    return this.dlg.open(MatAlertComponent, cfg).afterClosed();
   }
 }
