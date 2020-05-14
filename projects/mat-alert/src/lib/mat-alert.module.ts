@@ -9,6 +9,7 @@ import { MAT_ALERT_DEFAULT_CONFIG, matAlertDefaultConfig } from './mat-alert-def
 
 @NgModule({
   declarations: [MatAlertComponent],
+  entryComponents: [MatAlertComponent],
   imports: [
     CommonModule,
     MatDialogModule,
