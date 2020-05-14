@@ -17,12 +17,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs/",
+            "outputPath": "dist/docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -46,7 +46,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -138,6 +137,11 @@
           "options": {
             "tsConfig": "projects/mat-alert/tsconfig.lib.json",
             "project": "projects/mat-alert/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mat-alert/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -163,5 +167,8 @@
       }
     }
   },
-  "defaultProject": "lhn-libraries"
+  "defaultProject": "lhn-libraries",
+  "cli": {
+    "analytics": "b79befa0-e54e-4f94-aafa-fccd24bed272"
+  }
 }

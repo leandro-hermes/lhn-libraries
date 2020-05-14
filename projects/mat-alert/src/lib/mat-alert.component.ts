@@ -1,14 +1,28 @@
 import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 import { MatAlertConfig } from './mat-alert-config.interface';
 import { MAT_ALERT_DEFAULT_CONFIG } from './mat-alert-default-config.constant';
 
 @Component({
   selector: 'lhn-mat-alert',
-  templateUrl: './mat-alert-component.html',
-  styleUrls: ['./mat-alert-component.scss'],
+  template: `
+    <h1 mat-dialog-title>{{config.title}}</h1>
+    <mat-dialog-content class="mat-typography" *ngIf="config.message">
+      <h4 [innerHTML]="config.message"></h4>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+      <button [class.mat-raised-button]="config.raisedButton"
+              [color]="config.buttonTheme"
+              mat-button
+              mat-dialog-close
+              type="button">
+        {{config.buttonText}}
+      </button>
+    </mat-dialog-actions>
+  `,
+  styles: [],
 })
 export class MatAlertComponent {
 
@@ -28,4 +42,5 @@ export class MatAlertComponent {
     message = message.toString().replace(/(?:\r\n|\r|\n)/g, '<br/>');
     return this.sanitizer.bypassSecurityTrustHtml(message.toString());
   }
+
 }
