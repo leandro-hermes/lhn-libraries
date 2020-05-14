@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
-import { MatDialog, MatDialogConfig } from '@angular/material';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
 
 import { MatAlertComponent } from './mat-alert.component';
