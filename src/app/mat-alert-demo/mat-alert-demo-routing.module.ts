@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { MatAlertDemoComponent } from './mat-alert-demo.component';
 
 const routes: Routes = [

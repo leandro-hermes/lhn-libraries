@@ -1,6 +1,6 @@
 {
   "name": "@lhn/mat-alert",
-  "version": "0.0.13",
+  "version": "0.1.0",
   "author": "Leandro Hermes",
   "description": "Implementation of MatDialog shown as an alert message",
   "license": "MIT",
@@ -19,17 +19,10 @@
     "type": "git",
     "url": "https://github.com/leandro-hermes/lhn-libraries.git"
   },
-  "scripts": {
-    "build": "../../node_modules/.bin/tsc -p tsconfig.schematics.json",
-    "copy:schemas": "cp --parents schematics/*/schema.json ../../dist/mat-alert/",
-    "copy:files": "cp --parents -p schematics/*/files/** ../../dist/mat-alert/",
-    "copy:collection": "cp schematics/collection.json ../../dist/mat-alert/schematics/collection.json",
-    "postbuild": "yarn copy:collection"
-  },
   "peerDependencies": {
     "@angular/material": ">=6.0.0",
     "@angular/common": ">=6.0.0",
-    "@angular/core": ">=6.0.0"
-  },
-  "schematics": "./schematics/collection.json"
+    "@angular/core": ">=6.0.0",
+    "tslib": "^1.10.0"
+  }
 }

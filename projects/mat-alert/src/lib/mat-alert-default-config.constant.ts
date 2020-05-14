@@ -1,5 +1,6 @@
-import { MatAlertConfig } from './mat-alert-config.interface';
 import { InjectionToken } from '@angular/core';
+
+import { MatAlertConfig } from './mat-alert-config.interface';
 
 export const MAT_ALERT_DEFAULT_CONFIG = new InjectionToken<MatAlertConfig>('mat-alert.config');
 
