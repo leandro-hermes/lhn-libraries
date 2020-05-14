@@ -17,12 +17,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs/",
+            "outputPath": "dist/docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -46,7 +46,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -126,42 +125,6 @@
           }
         }
       }
-    },
-    "mat-alert": {
-      "projectType": "library",
-      "root": "projects/mat-alert",
-      "sourceRoot": "projects/mat-alert/src",
-      "prefix": "lhn",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/mat-alert/tsconfig.lib.json",
-            "project": "projects/mat-alert/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/mat-alert/src/test.ts",
-            "tsConfig": "projects/mat-alert/tsconfig.spec.json",
-            "karmaConfig": "projects/mat-alert/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/mat-alert/tsconfig.lib.json",
-              "projects/mat-alert/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    }
-  },
+    }},
   "defaultProject": "lhn-libraries"
 }
