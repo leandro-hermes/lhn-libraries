@@ -23,7 +23,7 @@ export class MatAlert {
    */
   public show(title: string, message: string = '', config: Partial<MatAlertConfig> = {}, disableClose = false): Observable<void> {
     config.title = title;
-    config.message = message;
+    config.message = message || '';
     const cfg: MatDialogConfig = Object.assign({
       minWidth: 300,
       data: config,
