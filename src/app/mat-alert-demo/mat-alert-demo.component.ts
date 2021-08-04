@@ -7,15 +7,21 @@ import { MatAlert } from 'mat-alert';
   styleUrls: ['./mat-alert-demo.component.scss'],
 })
 export class MatAlertDemoComponent {
-
   constructor(private alertSvc: MatAlert) { }
 
   public showAlert() {
-    this.alertSvc.show('Título', 'Mensagem', {
+    this.alertSvc.show('Alert title', 'Alert message goes here', {
       buttonTheme: 'accent',
       raisedButton: true,
-      buttonText: 'ouquei',
+      buttonText: 'Okay',
     });
   }
 
+  public toggleDarkTheme(active: boolean): void {
+    document.body.classList.toggle('dark-theme', active);
+  }
+
+  public isDarkThemeActive() {
+    return document.body.classList.contains('dark-theme');
+  }
 }

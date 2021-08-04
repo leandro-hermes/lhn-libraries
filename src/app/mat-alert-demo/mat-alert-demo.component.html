@@ -1,3 +1,7 @@
+<mat-toolbar color="accent">MatAlert example</mat-toolbar>
 <div class="container">
+  <mat-slide-toggle [checked]="isDarkThemeActive()" (change)="toggleDarkTheme($event.checked)">
+    <mat-icon>{{ isDarkThemeActive() ? 'dark_mode' : 'light_mode' }}</mat-icon>
+  </mat-slide-toggle>
   <button (click)="showAlert()" mat-raised-button type="button">Show alert</button>
 </div>
