@@ -29,7 +29,7 @@ export class MatAlert {
       data: config,
       role: 'alertdialog',
       disableClose,
-      hasBackdrop: !!this.dlg.openDialogs.length,
+      hasBackdrop: config.hasBackdrop ?? true,
     }, this.defaultConfigs, config);
     return this.dlg.open(MatAlertComponent, cfg).afterClosed();
   }
