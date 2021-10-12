@@ -1,6 +1,6 @@
 {
   "name": "@lhn/mat-alert",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Leandro Hermes",
   "description": "Implementation of MatDialog shown as an alert message",
   "license": "MIT",
