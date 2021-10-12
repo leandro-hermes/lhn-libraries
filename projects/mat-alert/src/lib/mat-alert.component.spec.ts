@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MatAlertComponent } from './mat-alert.component';
 
@@ -6,7 +6,7 @@ describe('MatAlertComponent', () => {
   let component: MatAlertComponent;
   let fixture: ComponentFixture<MatAlertComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MatAlertComponent ]
     })

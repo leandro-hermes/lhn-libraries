@@ -5,7 +5,7 @@ cd projects/mat-alert
 npm version patch --no-git-tag-version
 cd ../..
 echo "Building..."
-yarn build mat-alert --prod
+yarn build mat-alert --configuration=production
 #echo "Building schematics..."
 #cd projects/mat-alert
 #yarn build

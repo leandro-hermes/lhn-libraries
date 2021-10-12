@@ -19,10 +19,12 @@
     "type": "git",
     "url": "https://github.com/leandro-hermes/lhn-libraries.git"
   },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
   "peerDependencies": {
     "@angular/material": ">=6.0.0",
     "@angular/common": ">=6.0.0",
-    "@angular/core": ">=6.0.0",
-    "tslib": "^1.10.0"
+    "@angular/core": ">=6.0.0"
   }
 }
