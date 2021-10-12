@@ -39,7 +39,7 @@ export class MatAlertComponent {
    * Handles the message and sanitize
    */
   private _handleMessage(message: string | SafeHtml) {
-    message = message.toString().replace(/(?:\r\n|\r|\n)/g, '<br/>');
+    message = message.toString().replace(/(\r\n|\r|\n)/g, '<br/>');
     return this.sanitizer.bypassSecurityTrustHtml(message.toString());
   }
 
