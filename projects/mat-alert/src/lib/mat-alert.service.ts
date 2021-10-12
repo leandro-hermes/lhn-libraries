@@ -1,5 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { DialogRole } from '@angular/material/dialog/dialog-config';
 import { Observable } from 'rxjs';
 
 import { MatAlertComponent } from './mat-alert.component';
@@ -27,7 +28,7 @@ export class MatAlert {
     const cfg: MatDialogConfig = Object.assign({
       minWidth: 300,
       data: config,
-      role: 'alertdialog',
+      role: 'alertdialog' as DialogRole,
       disableClose,
       hasBackdrop: config.hasBackdrop ?? true,
     }, this.defaultConfigs, config);

@@ -1,25 +1,23 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatDialogModule } from '@angular/material/dialog';
+import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { BrowserModule } from '@angular/platform-browser';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MAT_ALERT_DEFAULT_CONFIG, matAlertDefaultConfig } from './mat-alert-default-config.constant';
 
 import { MatAlertComponent } from './mat-alert.component';
 import { MatAlert } from './mat-alert.service';
-import { MAT_ALERT_DEFAULT_CONFIG, matAlertDefaultConfig } from './mat-alert-default-config.constant';
 
 @NgModule({
   declarations: [MatAlertComponent],
   entryComponents: [MatAlertComponent],
   imports: [
     CommonModule,
-    BrowserModule,
     MatDialogModule,
     MatButtonModule,
   ],
   providers: [
     MatAlert,
-    {provide: MAT_ALERT_DEFAULT_CONFIG, useValue: matAlertDefaultConfig},
+    { provide: MAT_ALERT_DEFAULT_CONFIG, useValue: matAlertDefaultConfig },
   ],
 })
-export class MatAlertModule { }
+export class MatAlertModule {}
